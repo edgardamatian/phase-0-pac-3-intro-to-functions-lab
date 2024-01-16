@@ -1,3 +1,4 @@
+
 require ( './root.js' );
 
 
@@ -18,6 +19,8 @@ describe('logShout(string)', function() {
     const spy = expect.spyOn(console, 'log').andCallThrough();
 
     logShout('hello');
+
+    console.log(spy.calls);
 
     expect(spy).toHaveBeenCalledWith('HELLO');
 
